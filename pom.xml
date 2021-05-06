@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.comicshop</groupId>
-	<artifactId>comicshop</artifactId>
+	<artifactId>appweb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>comicshop</name>
+	<name>appweb</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
