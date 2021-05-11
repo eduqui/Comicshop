@@ -1,5 +1,5 @@
 package com.comicshop.comicshop.repository;
 
-public class ContactoRepository {
+public class ClienteRepository {
     
 }
