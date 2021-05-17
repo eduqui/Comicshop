@@ -1,6 +1,5 @@
 package com.comicshop.comicshop.model;
-import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.validation.constraints.NotNull;
 
 import javax.persistence.Entity;
@@ -8,6 +7,7 @@ import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+
 import lombok.*;
 
 @Getter

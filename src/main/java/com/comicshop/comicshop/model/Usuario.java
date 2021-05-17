@@ -1,4 +1,5 @@
 package com.comicshop.comicshop.model;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
@@ -13,7 +14,6 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_user")
-
 public class Usuario {
     @Id
     @Column(name = "user_id")
