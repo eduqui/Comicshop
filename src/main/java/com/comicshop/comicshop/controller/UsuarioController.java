@@ -32,8 +32,7 @@ public class UsuarioController {
     }  
 
     @PostMapping("/usuario/login")
-    public String loginSubmitForm(Model model, 
-         @Valid Usuario objUser, BindingResult result ){
+    public String loginSubmitForm(Model model,@Valid Usuario objUser, BindingResult result){
         String page=INDEX;
         model.addAttribute(MODEL_CONTACT, new Usuario());
         if(result.hasFieldErrors()) {
@@ -54,5 +53,4 @@ public class UsuarioController {
         }
         return page;
     }
-    
 }
