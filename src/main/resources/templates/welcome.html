@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
 <html xmlns:th="https://www.thymeleaf.org" 
-    th:replace="~{fragments/layout :: layout (~{::body},'home')}">
-
+    th:replace="~{fragments/layout :: layout (~{::body},'Home')}">
 <body>
-    <h2>Welcome</h2>
+    <body style="background-color:#147DD7;">
+    <h2>Bienvenidos</h2>
     <div class="row">
         <div class="col-md-10">
-          <img class="img-responsive" src="../static/resources/images/super.jpg" 
-                                    th:src="@{/resources/images/super.jpg}"/>
+          <img class="img-responsive" src="../static/resources/images/wallsuper.jpg " width="1100" height="500" 
+                                    th:src="@{/resources/images/wallsuper.jpg}"/>
         </div>
     </div>
 </body>
