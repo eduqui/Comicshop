@@ -26,17 +26,7 @@ import lombok.*;
 
 public class Proforma {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "producto_id")    
-    private Producto product;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private Usuario user;
-    private BigDecimal precio;
-    private Integer cantidad;   
+   
 
 
     
