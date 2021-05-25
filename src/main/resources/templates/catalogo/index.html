@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--m6-->
+<!DOCTYPE html>
 
 <html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'catalogo')}">
 
@@ -16,6 +16,7 @@
   <body style="background-color:#147DD7;">
 
   <div class="container">
+    <p th:text="${mensaje}" />
     <div class="row">
       <div class="col">
         <div id="products" class="mb-3">
