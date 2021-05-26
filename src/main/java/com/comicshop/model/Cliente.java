@@ -35,6 +35,7 @@ public class Cliente {
     private String maritalStatus;  
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private Usuario user;   
+    private Usuario user;
+   
     
 }

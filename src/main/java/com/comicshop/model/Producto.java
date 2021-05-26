@@ -31,5 +31,6 @@ public class Producto{
     private Date dueDate;
     private String imageFileName;
     private String status;
+  
    
 }
