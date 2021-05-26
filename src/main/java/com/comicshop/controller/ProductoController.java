@@ -1,72 +1,80 @@
 package com.comicshop.controller;
 
-import java.util.List;
-import java.util.Optional;
-
-import com.comicshop.model.Producto;
-import com.comicshop.model.Proforma;
-import com.comicshop.model.Usuario;
-import com.comicshop.repository.ProductoRepository;
-import com.comicshop.repository.ProformaRepository;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.ui.Model;
-import javax.servlet.http.HttpSession;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.comicshop.model.Producto;
+import com.comicshop.repository.ProductoRepository;
+
+import javax.validation.Valid;
+
+import java.util.List;
 
 @Controller
-public class CatalogoController{
-
-    private static final String INDEX ="catalogo/index"; 
+public class ProductoController {
+ 
+    private static final String VIEW_INDEX ="producto/index";
+    private static final String VIEW_CREATE="producto/create"; 
+    private static final String VIEW_EDIT="producto/edit"; 
+    private static String MODEL_PRODUCTO="producto";
     private final ProductoRepository productsData;
-    private final ProformaRepository proformaData;
     
 
-    public CatalogoController(ProductoRepository productsData,
-        ProformaRepository proformaData
+    public ProductoController(ProductoRepository productsData
         ){
         this.productsData = productsData;
-        this.proformaData = proformaData; 
         
     }      
 
-    @GetMapping("/catalogo/index")
-    public String index(
-        @RequestParam(defaultValue="") String searchName,
-        Model model){
-        List<Producto> listProducto = this.productsData.getAllActiveProductos();
-        model.addAttribute("products",listProducto);
-        return INDEX;
+    @GetMapping("/producto/index")
+    public String index(Model model){
+        List<Producto> listProducto = this.productsData.findAll();
+        model.addAttribute("productos",listProducto);
+        return VIEW_INDEX;
     }    
 
-    @GetMapping("/catalogo/add/{id}")
-    public String add(@PathVariable("id") Integer id, 
-        HttpSession session,
-        Model model){
-        Usuario user = (Usuario)session.getAttribute("user"); 
-        if(user==null) {
-            model.addAttribute("mensaje", "Debe loguearse antes de agregar");
+    @GetMapping("/producto/create")
+    public String create(Model model) {
+        model.addAttribute(MODEL_PRODUCTO, new Producto());
+        return VIEW_CREATE;
+    }    
+
+    @PostMapping("/producto/create")
+    public String createSubmitForm(Model model, 
+        @Valid Producto objProducto, BindingResult result ){
+        if(result.hasFieldErrors()) {
+            model.addAttribute("mensaje", "No se registro un Producto");
         }else{
-            Producto productSeleccionado = productsData.getOne(id);
-            Optional<Proforma> item= 
-                proformaData.findProformaByUsuarioAndProducto(user, productSeleccionado);
-            if(!item.isPresent()){
-                Proforma itemCarrito = new Proforma();
-                itemCarrito.setCantidad(1);
-                itemCarrito.setUser(user);
-                itemCarrito.setPrecio(productSeleccionado.getPrecio());
-                itemCarrito.setProduct(productSeleccionado);
-                proformaData.save(itemCarrito);
-                model.addAttribute("mensaje", "Se agrego el producto al carrito");
-            }else{
-                Proforma itemCarritoExistente=item.get();
-                itemCarritoExistente.setCantidad(itemCarritoExistente.getCantidad()+1);
-                proformaData.save(itemCarritoExistente);
-                model.addAttribute("mensaje", "Se adiciono el producto al carrito");
-            }
-        }   
-        return INDEX;
+            objProducto.setStatus("A");
+            this.productsData.save(objProducto);
+            model.addAttribute(MODEL_PRODUCTO, objProducto);
+            model.addAttribute("mensaje", "Se registro un Producto");
+        }
+        return VIEW_CREATE;
+    }
+
+    @GetMapping("/producto/edit/{id}")
+    public String edit(@PathVariable("id") Integer id, 
+        Model model){
+        Producto producto = this.productsData.getOne(id);
+        model.addAttribute(MODEL_PRODUCTO, producto);
+        return VIEW_EDIT;
     }  
+
+    @PostMapping("/producto/edit")
+	public String update(
+			@Valid Producto objProducto,
+			BindingResult bindingResult
+			){
+		if(bindingResult.hasFieldErrors()) {
+			return "redirect:/producto/edit/{id}";
+		}
+		this.productsData.save(objProducto);
+		return VIEW_INDEX;
+	}
+
 }
