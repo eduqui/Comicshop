@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.comicshop.model.Producto;
 import com.comicshop.model.Proforma;
-//import com.comicshop.model.Usuario;
+import com.comicshop.model.Usuario;
 import com.comicshop.repository.ProformaRepository;
 
 import javax.servlet.http.HttpSession;
