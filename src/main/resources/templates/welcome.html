@@ -12,17 +12,26 @@
 th:replace="~{fragments/layout :: layout (~{::body},'Home')}">
 
 <body>
+
+    <header>
+        
+        <section class="textos-header">
+        <h1>COMICSHOP</h1>
+        <h2>Comics y souvenirs</h2>
+        </section> 
+    </header>
+
     <body style="background-color:#147DD7;">
 
     <section class="textos-header">    
-    <h1>Bienvenidos a Comics Shop!</h1>
+    <h1>Bienvenidos</h1>
     <h2>Suscribete para tener  acceso a más de 15 000 comics y articulos unicos de colección </h2>
     </section>
 
     <div class="row">
         <div class="col-md-10">
-            <img class="img-responsive" src="../static/resources/images/wallsuper.jpg " width="1100" height="500" 
-                                    th:src="@{/resources/images/wallsuper.jpg}"/>
+            <img class="img-responsive" src="../static/resources/images/comicslista.jpg " width="1100" height="500" 
+                                    th:src="@{/resources/images/comicslista.jpg}"/>
         </div>
     </div>
 </body>
