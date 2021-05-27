@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 
+    <head>
+        <meta charset="UTF-8">
+        <title>Comic shop</title>
+        <link rel="shortcut icon" href="/resources/images/logocomic.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="/resources/css/estilos.css">
+
+    </head>
+
 <html xmlns:th="https://www.thymeleaf.org" 
-    th:replace="~{fragments/layout :: layout (~{::body},'Home')}">
+th:replace="~{fragments/layout :: layout (~{::body},'Home')}">
+
 <body>
     <body style="background-color:#147DD7;">
-    <h2>Bienvenidos</h2>
+
+    <section class="textos-header">    
+    <h1>Bienvenidos a Comics Shop!</h1>
+    <h2>Suscribete para tener  acceso a más de 15 000 comics y articulos unicos de colección </h2>
+    </section>
+
     <div class="row">
         <div class="col-md-10">
             <img class="img-responsive" src="../static/resources/images/wallsuper.jpg " width="1100" height="500" 

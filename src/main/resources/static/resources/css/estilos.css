@@ -1,0 +1,21 @@
+body .textos-header{
+    display: flex;/*permite colocar los elementos de una página para que se comporten de forma predecible cuando el diseño de la página debe acomodarse a diferentes tamaños de pantalla y diferentes dispositivos.*/
+    height: 430px;
+    width: 100%;
+    align-items: right; /*cetrar verticalmente*/
+    justify-content: center; /*La propiedad CSS justify-content define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.*/
+    flex-direction: column;/*veterinaria .. y centro de .. se ponen en columnas*/
+    text-align: center;
+}
+
+
+.textos-header h1{
+    font-size: 50px;
+    color:#D8BC00;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300; 
+    color:#D8BC00;
+}
