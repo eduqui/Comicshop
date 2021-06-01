@@ -8,6 +8,11 @@ body .textos-header{
     text-align: center;
 }
 
+body .img-responsive{
+    width: 100%;
+    height: auto;
+}
+
 
 .textos-header h1{
     font-size: 50px;
@@ -29,3 +34,13 @@ header {
     background-size: cover; /*especifica el tamaño de las imágenes de fondo. Cover: Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.*/
     background-attachment: fixed; /*Si fixed es especificado, la imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.*/
   }
+
+  .logo-sesion{
+    width: 18.75rem;
+    height: 18.75rem;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.logo-sesion img{
+    width: 70%;height: 70%;
+}
