@@ -1,4 +1,13 @@
+  
 <!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Comic shop</title>
+  <link rel="shortcut icon" href="/resources/images/logocomic.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/resources/css/estilos.css">
+
+</head>
 
 <html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'catalogo')}">
 
@@ -12,7 +21,7 @@
   <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
 
-<body>
+<body >
   <body style="background-color:#147DD7;">
 
   <div class="container">
@@ -34,7 +43,7 @@
                   <h5 class="card-title" th:text="${producto.descripcion}">Product name</h5>
                   <p class="card-text" th:text="${producto.precio}">Price</p>
                   <a th:href="@{'/catalogo/add/__${producto.id}__'}" 
-                      class="btn btn-primary" role="button">Add</a>
+                      class="btn btn-primary" role="button">Agregar</a>
                 </div>
               </div>
             </div>
