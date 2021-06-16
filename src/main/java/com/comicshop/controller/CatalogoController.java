@@ -1,37 +1,37 @@
 package com.comicshop.controller;
 
-import java.util.List;
+import java.util.List; 
 import java.util.Optional;
 
-import com.comicshop.model.Producto;
-import com.comicshop.model.Proforma;
+
+import com.comicshop.model.Producto;  
+import com.comicshop.model.Proforma; 
 import com.comicshop.model.Usuario;
 import com.comicshop.repository.ProductoRepository;
 import com.comicshop.repository.ProformaRepository;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.ui.Model;
+import org.springframework.stereotype.Controller;          
+import org.springframework.web.bind.annotation.GetMapping;  
+import org.springframework.web.bind.annotation.PathVariable; 
+import org.springframework.web.bind.annotation.RequestParam;  
+
+import org.springframework.ui.Model;                         
 import javax.servlet.http.HttpSession;
-
-@Controller
-public class CatalogoController{
-
-    private static final String INDEX ="catalogo/index"; 
-    private final ProductoRepository productsData;
-    private final ProformaRepository proformaData;
+@Controller                                                     
+public class CatalogoController {   
     
-
-    public CatalogoController(ProductoRepository productsData,
-        ProformaRepository proformaData
-        ){
+    private static final String INDEX ="catalogo/index";  
+    private final ProductoRepository productsData; 
+    private final ProformaRepository proformaData; 
+    
+    public CatalogoController(ProductoRepository productsData, 
+    
+    ProformaRepository proformaData
+    ){
         this.productsData = productsData;
         this.proformaData = proformaData; 
-        
     }      
-
+    
     @GetMapping("/catalogo/index")
     public String index(
         @RequestParam(defaultValue="") String searchName,
@@ -41,7 +41,7 @@ public class CatalogoController{
         return INDEX;
     }    
 
-    @GetMapping("/catalogo/add/{id}")
+    @GetMapping("/catalogo/add/{id}")   
     public String add(@PathVariable("id") Integer id, 
         HttpSession session,
         Model model){

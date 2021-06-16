@@ -1,5 +1,8 @@
-  
-package com.comicshop.controller;
+package com.comicshop.controller; 
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +22,6 @@ import java.util.List;
 
 @Controller
 public class ProformaController {
- 
     private static final String VIEW_INDEX ="proforma/index";
     private static String MODEL_PRODUCTO="proforma";
     private final ProformaRepository proformaData;
@@ -46,4 +48,10 @@ public class ProformaController {
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+
+
+>>>>>>> 4c3429e1525be478e667b43918a829bc36035de3

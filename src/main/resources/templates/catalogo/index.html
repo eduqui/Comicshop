@@ -1,11 +1,10 @@
-  
 <!DOCTYPE html>
 
 <head>
   <meta charset="UTF-8">
   <title>Comic shop</title>
-  <link rel="shortcut icon" href="../resources/images/logocomic.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="../resources/css/estilos.css">
+  <link rel="shortcut icon" href="/resources/images/logocomic.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/resources/css/estilos.css">
 
 </head>
 
@@ -40,7 +39,7 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title" th:text="${producto.descripcion}">Product name</h5>
+                  <h5 class="card-title" th:text="${producto.descripcion}">Nombre de Producto</h5>
                   <p class="card-text" th:text="${producto.precio}">Price</p>
                   <a th:href="@{'/catalogo/add/__${producto.id}__'}" 
                       class="btn btn-primary" role="button">Agregar</a>

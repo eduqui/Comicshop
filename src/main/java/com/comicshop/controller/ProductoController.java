@@ -16,7 +16,6 @@ import java.util.List;
 
 @Controller
 public class ProductoController {
- 
     private static final String VIEW_INDEX ="producto/index";
     private static final String VIEW_CREATE="producto/create"; 
     private static final String VIEW_EDIT="producto/edit"; 
@@ -58,7 +57,7 @@ public class ProductoController {
     }
 
     @GetMapping("/producto/edit/{id}")
-    public String edit(@PathVariable("id") Integer id, 
+    public String edit(@PathVariable("id") int id, 
         Model model){
         Producto producto = this.productsData.getOne(id);
         model.addAttribute(MODEL_PRODUCTO, producto);
@@ -78,3 +77,4 @@ public class ProductoController {
 	}
 
 }
+

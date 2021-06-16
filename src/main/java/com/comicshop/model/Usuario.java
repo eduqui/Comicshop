@@ -1,10 +1,12 @@
 package com.comicshop.model;
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
 
-import java.io.Serializable;
+import java.io.Serializable; 
 
 import javax.persistence.Column;
 
@@ -17,10 +19,11 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_user")
-public class Usuario implements Serializable{
+
+public class Usuario implements Serializable{  
     @Id
     @Column(name = "user_id")
     private String userID;
     private String password;
-   
+    private String tipoUsuario;
 }

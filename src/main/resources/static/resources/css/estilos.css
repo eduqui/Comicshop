@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/*Welcome*/
+>>>>>>> 4c3429e1525be478e667b43918a829bc36035de3
 body .textos-header{
     display: flex;/*permite colocar los elementos de una página para que se comporten de forma predecible cuando el diseño de la página debe acomodarse a diferentes tamaños de pantalla y diferentes dispositivos.*/
     height: 430px;
@@ -6,6 +10,11 @@ body .textos-header{
     justify-content: center; /*La propiedad CSS justify-content define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.*/
     flex-direction: column;/*veterinaria .. y centro de .. se ponen en columnas*/
     text-align: center;
+}
+
+body .img-responsive{
+    width: 100%;
+    height: auto;
 }
 
 
@@ -28,4 +37,22 @@ header {
     background: linear-gradient(to right, hsla(67, 100%, 91%, 0), hsla(149, 100%, 82%, 0.664)), url(/resources/images/wallsuper.jpg); 
     background-size: cover; /*especifica el tamaño de las imágenes de fondo. Cover: Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.*/
     background-attachment: fixed; /*Si fixed es especificado, la imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.*/
-  }
+}
+/*welcome*/
+
+
+
+/*Login*/
+.logo-sesion{
+    width: 18.75rem;
+    height: 18.75rem;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.logo-sesion img{
+    width: 70%;height: 70%;
+}
+/*login*/
+
+
+

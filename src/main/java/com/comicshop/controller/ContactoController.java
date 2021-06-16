@@ -2,32 +2,35 @@ package com.comicshop.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PostMapping; 
+import org.springframework.validation.BindingResult;  
 import org.springframework.ui.Model;
 
-import javax.validation.Valid;
+import javax.validation.Valid;               
 
-import com.comicshop.model.Contacto;
+import com.comicshop.model.Contacto;  
 import com.comicshop.repository.ContactoRepository;
 
-@Controller
-public class ContactoController {
-    private static final String INDEX ="contacto/create"; 
-    private static String MODEL_CONTACT="contact";
-    private final ContactoRepository contactsData;
 
+
+@Controller
+public class ContactoController { 
+
+    private static final String INDEX ="contacto/create"; 
+    private static String MODEL_CONTACT="contact"; 
+    private final ContactoRepository contactsData; 
+    
     public ContactoController(ContactoRepository contactsData){
         this.contactsData = contactsData;
-    }    
+    }
 
     @GetMapping("/contacto/create")
-    public String index(Model model) {
-        model.addAttribute(MODEL_CONTACT, new Contacto());
+    public String index(Model model){     
+        model.addAttribute("contact", new Contacto());       
         return INDEX;
-    }  
+    }
     
-    @PostMapping("/contacto/create")
+    @PostMapping("/contacto/create") 
     public String createSubmitForm(Model model, 
         @Valid Contacto objContact, BindingResult result ){
         if(result.hasFieldErrors()) {
@@ -39,5 +42,4 @@ public class ContactoController {
         }
         return INDEX;
     }
-    
 }

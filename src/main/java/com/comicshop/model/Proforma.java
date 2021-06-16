@@ -1,5 +1,4 @@
-package com.comicshop.model;
-
+package com.comicshop.model;  
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -24,10 +23,12 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_proforma")
+
 public class Proforma {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "producto_id")    
     private Producto product;
@@ -35,7 +36,9 @@ public class Proforma {
     @JoinColumn(name = "user_id")
     private Usuario user;
     private BigDecimal precio;
-    private Integer cantidad;
-  
-     
+    private Integer cantidad;   
+
+
+    
 }
+

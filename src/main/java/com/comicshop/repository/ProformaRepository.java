@@ -10,8 +10,8 @@ import com.comicshop.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-
 @Repository
+
 public interface ProformaRepository extends JpaRepository<Proforma, Integer>{
     
     @Query(value = "SELECT o FROM Proforma o WHERE o.user=?1")

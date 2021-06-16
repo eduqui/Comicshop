@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comic shop</title>
+        <link rel="shortcut icon" href="/resources/images/logocomic.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="/resources/css/index.css"> <!--ev-->
+        <link rel="stylesheet" href="/resources/css/estilos.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"> <!--ev-->
+        
+    </head>
+
 <html xmlns:th="https://www.thymeleaf.org" 
-    th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+th:replace="~{fragments/layout :: layout (~{::body},'Home')}">
 
 <body>
-    <h2>Welcome</h2>
+
+    <header><section class="textos-header">
+        <h1>COMICSHOP</h1>
+        <h2>Comics y souvenirs</h2>
+        </section> 
+    </header>
+
+    <body style="background-color:#147DD7;">
+
+    <section class="textos-header">    
+    <h1>Bienvenidos</h1>
+    <h2>Suscribete para tener  acceso a más de 15 000 comics y articulos unicos de colección </h2>
+    </section>
+
     <div class="row">
         <div class="col-md-10">
-          <img class="img-responsive" src="../static/resources/images/super.jpg" 
-                                    th:src="@{/resources/images/super.jpg}"/>
+            <img class="img-responsive" src="../static/resources/images/comicslista.jpg " width="1100" height="500" 
+                                    th:src="@{/resources/images/comicslista.jpg}"/>
         </div>
     </div>
 </body>
