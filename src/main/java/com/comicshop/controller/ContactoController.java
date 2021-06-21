@@ -13,6 +13,7 @@ import com.comicshop.repository.ContactoRepository;
 
 @Controller
 public class ContactoController {
+    
     private static final String INDEX ="contacto/create"; 
     private static String MODEL_CONTACT="contact";
     private final ContactoRepository contactsData;

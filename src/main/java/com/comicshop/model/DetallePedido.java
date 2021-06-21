@@ -1,15 +1,15 @@
 package com.comicshop.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -19,16 +19,17 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "t_product")
-public class Producto {
+@Table(name = "t_detail_order")
+public class DetallePedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String descripcion;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "producto_id")    
+    private Producto product;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id")    
+    private Pedido pedido;
     private BigDecimal precio;
-    @Temporal(TemporalType.DATE)
-    private Date dueDate;
-    private String imageFileName;
-    private String status;
-    
+    private Integer cantidad; 
 }

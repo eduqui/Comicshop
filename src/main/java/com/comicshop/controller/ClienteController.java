@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
 import com.comicshop.model.Cliente;
+import com.comicshop.model.Usuario;
 import com.comicshop.repository.ClienteRepository;
 import com.comicshop.repository.UsuarioRepository;
 
