@@ -28,6 +28,8 @@ public class Contacto {
     private String email;
     @NotNull
     private String phone; 
+    @NotNull
+    private String reason; 
     
     
 }
