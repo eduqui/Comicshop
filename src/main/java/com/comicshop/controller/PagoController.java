@@ -26,9 +26,10 @@ import java.util.List;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
+
 @Controller
 public class PagoController {
-    
+
     private static final String VIEW_INDEX ="pago/create";
     private static String MODEL_VIEW="pago";
     private final ProformaRepository proformaData;

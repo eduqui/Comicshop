@@ -41,7 +41,7 @@ public class PedidoController {
         List<Pedido> listItems = pedidoData.findItemsByCliente(cliente.getId());
         model.addAttribute("pedidos",listItems);
         return VIEW_INDEX;
-    }    
+    }     
 
     @GetMapping("/pedido/view/{id}")
     public String createSubmitForm(@PathVariable("id") int id, 

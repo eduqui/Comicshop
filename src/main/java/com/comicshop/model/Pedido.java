@@ -27,5 +27,4 @@ public class Pedido {
     private Date orderDate; 
     private Integer clienteId;
     private BigDecimal montoTotal;
-    
 }
