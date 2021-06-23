@@ -34,5 +34,8 @@ public class Pago {
     private String cvv;
     private BigDecimal montoTotal;
     private Integer clienteId;
+    public void setClienteId(Long id2) {
+    }
+ 
     
 }
