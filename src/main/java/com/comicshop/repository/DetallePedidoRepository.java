@@ -1,6 +1,7 @@
 package com.comicshop.repository;
 
 import java.util.List;
+import java.util.Map;
 
 import com.comicshop.model.DetallePedido;
 import com.comicshop.model.Pedido;
@@ -14,5 +15,8 @@ public interface  DetallePedidoRepository extends JpaRepository<DetallePedido, I
 
     @Query(value = "SELECT o FROM DetallePedido o WHERE o.pedido=?1")
     List<DetallePedido> findItemsByPedido(Pedido pedido);
+
+    @Query(value = "SELECT pr.descripcion as descripcion, SUM(o.cantidad) as cantidad, SUM(o.precio*o.cantidad) as montototal  FROM DetallePedido o JOIN o.pedido p JOIN o.product pr GROUP BY pr.descripcion ORDER BY cantidad DESC")
+    List<Map<String, Object>> querySumaTotal();
     
 }
