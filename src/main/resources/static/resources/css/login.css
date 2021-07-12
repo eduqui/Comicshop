@@ -1,0 +1,85 @@
+.for-reg{
+	margin: 0;
+	padding: 0;
+	font-family: tahoma,sans-serif;
+
+	background-size: cover;
+}
+
+
+.login-inicio{
+	
+	width: 280px;
+	color:  red;
+	width: 400px;
+	background: #24303c;
+	padding: 30px;
+	margin:	auto;	
+	margin-top: 100px;
+	border-radius: 4px;
+	font-family: 'tahoma';
+	color: white;
+	box-shadow: 7px 13px 37px #000;
+}
+.registro{
+
+	width: 280px;
+	color: red;
+	width: 400px;
+	background: #24303c;
+	padding: 30px;
+	margin:auto;
+	margin-top: 50px;
+	border-radius: 4px;
+	font-family: 'calibri';
+	color: white;
+	box-shadow: 7px 13px 37px #000;
+}
+
+.input {
+	width: 100%;
+	background: #24303c;
+	color: white;
+	padding:10px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 1px solid #1f53c5;
+	font-family: 'calibri'
+	
+
+	
+}
+
+.button{
+width: 100%;
+background: blue;
+border: none;
+padding: 12px;
+color: white;
+margin: 16px 0;
+font-size: 16px;
+}
+.inicio{
+width: 100%;
+background: red;
+border: none;
+padding: 12px;
+color: white;
+margin: 16px 0;
+font-size: 16px;
+}
+
+.login-prin{
+	width: 100%;
+	padding: 12px;
+	color: yellow;
+
+}
+.test{
+	color: red;
+
+}
+.test1{
+	color: red;
+
+}
