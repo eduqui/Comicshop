@@ -1,8 +1,8 @@
 .for-reg{
-	margin: 0;
-	padding: 0;
+	margin: auto;
+	padding: auto;
 	font-family: tahoma,sans-serif;
-
+	background-image: url(../images/fondo10.jpg);
 	background-size: cover;
 }
 
