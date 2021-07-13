@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'catalogo')}">
 
 <head>
@@ -25,8 +26,8 @@
                 <div class="card-body">
                   <div class="card-img-actions">
                     <img class="img-responsive" alt="${producto.descripcion}" width="96" height="150"
-                      src="../static/resources/catalogo/${producto.imageFileName}"
-                      th:src="@{'/resources/catalogo/'+${producto.imageFileName}}" />
+                    src="../static/resources/catalogo/${producto.imageFileName}"
+                    th:src="@{'/resources/catalogo/'+${producto.imageFileName}}" />
                   </div>
                 </div>
                 <div class="card-body">
