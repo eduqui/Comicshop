@@ -16,7 +16,7 @@ import org.springframework.validation.BindingResult;
 import javax.servlet.http.HttpServletRequest;
 @Controller
 public class UsuarioController {
-
+    
     private static final String INDEX ="usuario/login"; 
     private static String MODEL_CONTACT="user";
     private static String MODEL_MESSAGE="mensaje";

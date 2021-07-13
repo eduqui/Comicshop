@@ -17,7 +17,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_contact")
-public class Contacto {
+public class Contacto{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,6 +30,5 @@ public class Contacto {
     private String phone; 
     @NotNull
     private String reason; 
-    
-    
+  
 }
