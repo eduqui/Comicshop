@@ -31,22 +31,22 @@
         <table id="example" class="table table-bordered table-responsive" style="width: 100%">
           <thead>
             <tr>
-              <th>Id</th>
-              <th>Nombre</th>
-              <th>Pais</th>
-              <th>Precio</th>
-              <th>Descripcion</th>
-              <th>Cantidad</th>
+              <th style="color: yellow;">Id</th>
+              <th style="color: yellow;" >Nombre</th>
+              <th style="color: yellow;" >Pais</th>
+              <th style="color: yellow;" >Precio</th>
+              <th style="color: yellow;">Descripcion</th>
+              <th style="color: yellow;" >Cantidad</th>
               <th>#</th>
             </tr>
           </thead>
           <tbody>
             <tr th:each="proforma : ${proformas}">
-              <td th:text="${proforma.product.id}"></td>
-              <td th:text="${proforma.product.nombre}"></td>
-              <td th:text="${proforma.product.pais}"></td>
-              <td th:text="${proforma.precio}"></td>
-              <td th:text="${proforma.product.descripcion}"></td>
+              <td style="color: yellowgreen;" th:text="${proforma.product.id}"></td>
+              <td style="color: yellowgreen;"  th:text="${proforma.product.nombre}"></td>
+              <td style="color: yellowgreen;"  th:text="${proforma.product.pais}"></td>
+              <td style="color: yellowgreen;"  th:text="${proforma.precio}"></td>
+              <td style="color: yellowgreen;"  th:text="${proforma.product.descripcion}"></td>
               <td>
                 <input type="number" class="form-control" id="cantidad" 
                   autocomplete="off" th:value="${proforma.cantidad}"
