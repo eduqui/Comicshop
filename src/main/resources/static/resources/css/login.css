@@ -73,6 +73,7 @@ font-size: 16px;
 	width: 100%;
 	padding: 12px;
 	color: yellow;
+	font-family: 'Courier New', Courier, monospace;
 
 }
 .test{
@@ -82,4 +83,15 @@ font-size: 16px;
 .test1{
 	color: blue;
 
+}
+
+.input1 {
+	width: 100%;
+	background: #24303c;
+	color: white;
+	padding:10px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 1px solid #1f53c5;
+	font-family: 'calibri'
 }

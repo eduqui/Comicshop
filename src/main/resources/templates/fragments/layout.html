@@ -14,9 +14,12 @@
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.css}" />
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css}" />
   <link th:rel="stylesheet" th:href="@{/resources/css/w3.css}" />
+  <link th:rel="stylesheet" th:href="@{/resources/css/w2.css}" />
   <link th:rel="stylesheet" th:href="@{/resources/css/login.css}" />
 </head>
 <body class="for-reg"> 
+  
+
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">ComicShop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,28 +28,28 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="a01" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contacto/create">Contact</a>
+              <a class="a01" href="/contacto/create">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/catalogo/index">Catalogo</a>
+              <a class="a01" href="/catalogo/index">Catalogo</a>
             </li>    
                                             
             <th:block th:if="${session.user!=null}">
               <li class="nav-item">
-                <a class="nav-link" href="/producto/index">Producto</a>
+                <a class="a01" href="/producto/index">Producto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/proforma/index">Carrito</a>
+                <a class="a01" href="/proforma/index">Carrito</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="/pedido/index">Pedido</a>
+                <a class="a01" href="/pedido/index">Pedido</a>
               </li>                               
             </th:block>
           </ul>
-          
+         
           <ul class="nav navbar-nav navbar-right">
             <th:block th:if="${session.user==null}">
               <li><a href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
@@ -55,10 +58,14 @@
             <th:block th:if="${session.user!=null}">
               <li><a href="/usuario/logout"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
             </th:block>                     
-          </ul>      
+          </ul>    
+       
+        </nav>  
         </div>
-    </nav> 
     
+  
+
+
     <div class="container-fluid">
       <div class="container xd-container">
   

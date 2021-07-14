@@ -18,7 +18,7 @@
                   <label for="firstName" style="color: yellow;">Nombre</label>
                 </div>
                 <div class="col-sm-2">
-                  <input type="text" th:field="*{firstName}" />
+                  <input type="text" th:field="*{firstName}"  class="input1"/>
                 </div>
               </div>
               <div class="form-group row">
@@ -26,7 +26,7 @@
                   <label for="lastName" style="color: yellow;">Apellido</label>
                 </div>
                 <div class="col-sm-2">
-                  <input type="text" th:field="*{lastName}" />
+                  <input type="text" th:field="*{lastName}" class="input1" />
                 </div>
               </div>              
               <div class="form-group row">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-sm-2">
                   <input type="text" data-inputmask="'alias': 'email'"
-                  autocomplete="off" th:field="*{email}" />
+                  autocomplete="off" th:field="*{email}" class="input1" />
                 </div>
               </div>
               <div class="form-group row">
@@ -43,7 +43,7 @@
                   <label for="phone" style="color: yellow;">Celular</label>
                 </div>
                 <div class="col-sm-2">
-                  <input type="text" data-inputmask="'mask': '(999) 999-9999'" th:field="*{phone}" />
+                  <input type="text" data-inputmask="'mask': '(999) 999-9999'" th:field="*{phone}" class="input1" />
                 </div>
               </div>
               <div class="form-group row">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-sm-3">
                   <div class="input-group date">
-                    <input type="text" class="form-control" id="birthdate" 
+                    <input type="text" class="input1"  id="birthdate" 
                       data-inputmask="'alias': 'datetime', 'inputFormat': 'dd/mm/yyyy'" 
                       autocomplete="off" th:field="*{birthdate}" />
                     <div class="input-group-append">
@@ -66,7 +66,7 @@
                   <label for="maritalStatus" style="color: yellow";>Estado Civil</label>
                 </div>
                 <div class="col-sm-2">
-                  <select id="maritalStatus" placeholder="MaritalStatus" autocomplete="off" class="form-control"
+                  <select id="maritalStatus" placeholder="MaritalStatus" autocomplete="off" class="input1" 
                     th:field="*{maritalStatus}">
                     <option value="-">None</option>
                     <option value="Solter@">Solter@</option>
@@ -80,12 +80,12 @@
                 <div class="col-sm-2"></div>
                 <div class="col-sm-2">
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="genderM" name="genderM" class="custom-control-input" value="Male"
+                    <input type="radio" id="genderM" name="genderM" class="input1" value="Male"
                       th:field="*{gender}">
                     <label class="custom-control-label" for="genderM" style="color: yellow">Hombre</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="genderF" name="genderF" class="custom-control-input" value="Female"
+                    <input type="radio" id="genderF" name="genderF" class="input1" value="Female"
                       th:field="*{gender}">
                     <label class="custom-control-label" for="genderF" style="color: yellow">Mujer</label>
                   </div>
@@ -96,7 +96,7 @@
                   <label for="user.userID" style="color: yellow">Usuario</label>
                 </div>
                 <div class="col-sm-2">
-                  <input type="text" th:field="*{user.userID}" />
+                  <input type="text" th:field="*{user.userID}" class="input1" />
                 </div>
               </div>
               <div class="form-group row">
@@ -104,7 +104,7 @@
                   <label for="user.password" style="color: yellow">Contraseña</label>
                 </div>
                 <div class="col-sm-2">
-                  <input type="password" th:field="*{user.password}" />
+                  <input type="password" th:field="*{user.password}" class="input1" />
                 </div>
               </div>              
               <div class="form-group row">
@@ -114,7 +114,7 @@
                 </div>
               </div>
             </form>
-            <p th:text="${mensaje}" />
+            <p th:text="${mensaje}" style="color: blanchedalmond;"/>
           </div>
         </div>
       </div>
