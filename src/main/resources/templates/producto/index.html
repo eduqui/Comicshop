@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comic shop</title>
   <link rel="shortcut icon" href="/resources/images/logo3.png" type="image/x-icon">   
-</head>ad>
+</head>
 
 <html xmlns:th="https://www.thymeleaf.org" 
 
@@ -28,7 +28,7 @@ th:replace="~{fragments/layout :: layout (~{::body},'producto')}">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mt-5 mb-5">
-        <h2>Productos</h2><br/>
+        <h2 style="color: yellow;">Productos</h2><br/>
         <a href="/producto/create">Crear</a>
         <table id="example" class="table table-bordered table-responsive" style="width: 100%">
           <thead>
@@ -45,13 +45,15 @@ th:replace="~{fragments/layout :: layout (~{::body},'producto')}">
             <tr th:each="producto : ${productos}">
               <td>
                 <a th:href="@{'/producto/edit/__${producto.id}__'}"
-                class="btn btn-info" role="button">Editar</a>
+                class="btn btn-info" role="button">Editar</a> <br><br>
+                <a 
+                class="btn btn-info" role="button">Eliminar</a>
               </td>
-              <td th:text="${producto.nombre}"></td>
-              <td th:text="${producto.pais}"></td>
-              <td th:text="${producto.precio}"></td>
-              <td th:text="${producto.descripcion}"></td>
-              <td th:text="${producto.imageFileName}"></td>
+              <td  style="color: yellowgreen;"  th:text="${producto.nombre}"></td>
+              <td style="color: yellowgreen;"  th:text="${producto.pais}"></td>
+              <td style="color: yellowgreen;"  th:text="${producto.precio}"></td>
+              <td style="color: yellowgreen;"  th:text="${producto.descripcion}"></td>
+              <td style="color: yellowgreen;"  th:text="${producto.imageFileName}"></td>
             </tr>
           </tbody>
         </table>
