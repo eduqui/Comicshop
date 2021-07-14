@@ -19,19 +19,21 @@
 </head>
 <body class="for-reg"> 
   
-
+    
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">ComicShop</a>
+      
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+       
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="a01" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="a01" href="#">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="a01" href="/contacto/create">Contact</a>
+              <a class="a01" href="/contacto/create">Contacto</a>
             </li>
             <li class="nav-item">
               <a class="a01" href="/catalogo/index">Catalogo</a>
@@ -52,16 +54,17 @@
          
           <ul class="nav navbar-nav navbar-right">
             <th:block th:if="${session.user==null}">
-              <li><a href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-              <li><a href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+              <li><a href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Registrarse</a></li>
+              <li><a href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span>Inicar session</a></li>
             </th:block>   
             <th:block th:if="${session.user!=null}">
-              <li><a href="/usuario/logout"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+              <li><a href="/usuario/logout"><span class="glyphicon glyphicon-log-in"></span>Cerrar session</a></li>
             </th:block>                     
           </ul>    
-       
+        
         </nav>  
         </div>
+     
     
   
 

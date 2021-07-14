@@ -14,7 +14,7 @@
           <div class="col-sm-10 mt-5">
             <div class="form-group row">
               <header>
-              <h1 class="login-prin" >  Login</h1>
+              <h1 class="login-prin" > Inicar sesión</h1>
               </header>
             </div>
             <form th:object="${user}" th:action="@{/usuario/login}" method="post">
@@ -37,11 +37,11 @@
               <div class="form-group row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-2">
-                  <button th:with="text='Login'" class="inicio" type="submit" th:text="${text}"/>
+                  <button th:with="text=' Inicar sesión'" class="inicio" type="submit" th:text="${text}"/>
                 </div>
               </div>
             </form>
-            <p th:text="${mensaje}" />
+            <p th:text="${mensaje}"  style="color: aliceblue;"/>
           </div>
         </div>
       </div>
