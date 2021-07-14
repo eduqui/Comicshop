@@ -1,14 +1,13 @@
 package com.comicshop.model;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;   
+import javax.persistence.Entity;               
+import javax.persistence.Table;                
+import javax.persistence.Id;                  
+import javax.persistence.GeneratedValue;       
+import javax.persistence.GenerationType;      
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
-import lombok.*;
+import lombok.*;                             
 
 @Getter
 @Setter
@@ -30,5 +29,5 @@ public class Contacto{
     private String phone; 
     @NotNull
     private String reason; 
-  
+
 }

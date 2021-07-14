@@ -1,5 +1,6 @@
 package com.comicshop.model;
 
+
 import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -21,19 +22,21 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_customer")
+
 public class Cliente {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer  id;
     private String firstName;
     private String lastName;
     private String email;
     private String phone; 
     @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Date birthdate; 
+    private Date birthdate;
     private String gender;
     private String maritalStatus;  
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY) 
     @JoinColumn(name = "user_id")
     private Usuario user;   
 }
