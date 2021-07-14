@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comic shop</title>
-    <link rel="shortcut icon" href="/resources/images/logo3.png" type="image/x-icon">   
+    <link rel="shortcut icon" href="/resources/images/logo3.png" type="image/x-icon">
+    <link rel="stylesheet" href="/resources/css/estilos.css">   
 </head>
 
 <html xmlns:th="https://www.thymeleaf.org"
 
     th:replace="~{fragments/layout :: layout (~{::body},'Home')}">
 
-        
 <body>
     <body class="for-reg">
     <h2 style="color: white" >Bienvenidos a Comicshop</h2>
@@ -24,6 +24,26 @@
                                     
         </div>
     </div>
+    <section class="clientes contenedores">
+        <h2 class="titulo">NOTICIAS: "LLEGARON NUEVOS COMICS DE COLECCIÓN" </h2>
+        <div class="cards">
+            <div class="card">
+                <img src="/resources/catalogo/Batman.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Batman 1990</h4>
+                    <p>La caida del caballero de la noche escrito por Mike Miller</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/resources/catalogo/Shazam.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Shazam</h4>
+                    <p>"Compilación de sus mejores comics del 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 
