@@ -30,10 +30,10 @@
         <table id="example" class="table table-bordered table-responsive" style="width: 100%">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Id</th>
-              <th>Fecha</th>
-              <th>Total</th>
+              <th style="color: gold;">#</th>
+              <th style="color: gold;">Id</th>
+              <th style="color: gold;">Fecha</th>
+              <th style="color: gold;">Total</th>
             </tr>
           </thead>
           <tbody>
@@ -42,13 +42,13 @@
                   <a th:href="@{'/pedido/view/__${pedido.id}__'}"
                      class="btn btn-info" role="button">View</a>
                 </td>
-                <td th:text="${pedido.id}"></td>
-                <td th:text="${pedido.orderDate}"></td>
-                <td th:text="${pedido.montoTotal}"></td>
+                <td style="color: gold;"th:text="${pedido.id}"></td>
+                <td style="color: gold;"th:text="${pedido.orderDate}"></td>
+                <td style="color: gold;"th:text="${pedido.montoTotal}"></td>
             </tr>
           </tbody>
         </table>
-        <p th:text="${mensaje}" />
+        <p style="color: gold;"th:text="${mensaje}" />
       </div>
     </div>
   </div>
